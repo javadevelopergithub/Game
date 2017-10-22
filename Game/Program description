@@ -1,0 +1,15 @@
+A grid turn based multiplayer game.
+
+Gameplay: on a 8x8 (can be change in code) board size two players take turns to select cells of the board. If a player creates 
+a square on the board or a rhombus, the player is awarded points based on the size of the figure and a fade animation plays for 
+every figure created that turn. when the grid is full the game ends and the player with the most points wins or a the game is 
+drawn.
+
+classes:
+SquaresClient: the client class, which does all of the gameplay and connects to the server to send and receive moves between 
+players. 
+
+SquaresServer: the server class just connects to players and sends moves from player to players. for each game (two connections) 
+to the server a new thread is started on the server.
+
+SquaresConstants: an interface for storing common values between classes.
